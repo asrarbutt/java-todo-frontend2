@@ -34,9 +34,10 @@ public class TodoController {
 
 
     @PutMapping(path = "/todo/{id}")
-    public void updateStatus(@RequestBody Kanban kanban, @PathVariable int id ){
+    public void updateStatus(@RequestBody Kanban kanban, @PathVariable String id ){
 
-        id=123;
+
+
         todoService.updateTodo(kanban);
     }
 

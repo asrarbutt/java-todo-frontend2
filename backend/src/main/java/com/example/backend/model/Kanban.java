@@ -9,13 +9,13 @@ public class Kanban {
     String description;
     Status status;
 
-    UUID id;
+    String id;
 
 
     public Kanban(String description, Status status) {
         this.description = description;
         this.status = status;
-        this.id= UUID.randomUUID();
+        this.id= UUID.randomUUID().toString();
     }
 
 
@@ -35,11 +35,20 @@ public class Kanban {
         this.status = status;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getId() {
+        return id;
+    }
+
     @Override
     public String toString() {
         return "Kanban{" +
                 "description='" + description + '\'' +
                 ", status=" + status +
+                ", id='" + id + '\'' +
                 '}';
     }
 }

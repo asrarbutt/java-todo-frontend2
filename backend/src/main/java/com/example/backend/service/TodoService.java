@@ -6,6 +6,7 @@ import com.example.backend.repository.KanbanRepo;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
@@ -18,10 +19,14 @@ public class TodoService {
 
     public void addTodo(String todo){
         kanbanRepo.addTodo(todo);
+
     }
 
     public void addTodo(Kanban kanban){
+
         kanbanRepo.addTodo(kanban);
+
+
     }
 
     public List<Kanban> getTodos(){
