@@ -50,4 +50,13 @@ public class TodoController {
     public Kanban getDateils(@PathVariable String id){
         return todoService.getDetails(id);
     }
+
+
+    @PutMapping(path = "/todo/{id}/update")
+    public void updateTodo(@RequestBody Kanban kanban, @PathVariable String id) {
+
+
+        todoService.updateTodo(kanban);
+    }
+
 }
