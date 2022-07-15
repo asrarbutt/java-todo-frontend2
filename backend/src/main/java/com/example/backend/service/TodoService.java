@@ -17,10 +17,6 @@ public class TodoService {
         this.kanbanRepo = kanbanRepo;
     }
 
-    public void addTodo(String todo){
-        kanbanRepo.addTodo(todo);
-
-    }
 
     public void addTodo(Kanban kanban){
 
@@ -46,5 +42,14 @@ public class TodoService {
         return "TodoService{" +
                 "kanbanRepo=" + kanbanRepo +
                 '}';
+    }
+
+    public void deleteTodo(String id) {
+
+        kanbanRepo.deleteTodo(id);
+    }
+
+    public Kanban getDetails(String id) {
+        return kanbanRepo.getDetails(id);
     }
 }

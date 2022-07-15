@@ -13,8 +13,7 @@ class KanbanRepoTest {
     void addTodo() {
         //Given
         KanbanRepo kanbanRepo=new KanbanRepo();
-        kanbanRepo.addTodo("Sport machen");
-        kanbanRepo.addTodo("Wäsche waschen");
+
 
         //when
         List<Kanban> expected=List.of(new Kanban("Sport machen", Status.OPEN)
@@ -31,8 +30,7 @@ class KanbanRepoTest {
 
         //Given
         KanbanRepo kanbanRepo=new KanbanRepo();
-        kanbanRepo.addTodo("Sport machen");
-        kanbanRepo.addTodo("Wäsche waschen");
+
 
         //when
         List<Kanban> expected=List.of(new Kanban("Sport machen", Status.OPEN)
